@@ -52,7 +52,8 @@ def main():
     for i in range(k):
         ax.plot([LCBi[i],UCBi[i]],[i,i],marker="|")
         ax.plot(sum_result[i]/each_attempt[i],i,marker="o",color="black")
-    plt.savefig("LCB_UCB.png")
+    ax.set_box_aspect(1)
+    plt.savefig("LCB_UCB.png",dpi = 600)
     plt.show()
             
 
