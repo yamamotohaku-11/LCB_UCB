@@ -11,7 +11,7 @@ def main():
     
     count = 1
     LCBi = [0 for i in range(k)]
-    UCBi = [0 for i in range(k)]
+    UCBi = [1 for i in range(k)]
     others =[50]
 
 
@@ -26,7 +26,7 @@ def main():
 
     plt.ion()
     fig.show()
-    while  max(LCBi) <= max(others):
+    while  0.05 <=  max(others) - max(LCBi):
         print(count,UCBi,others,max(others) == max(UCBi))
         for i in range(k):
             result = pulls[i].rvs(1)[0]
